@@ -14,9 +14,25 @@ android {
         versionName '1.0'
     }
 
+    // Release key: keystore.properties + release.jks in the project folder (not in git).
+    def keystoreFile = rootProject.file('keystore.properties')
+    if (keystoreFile.exists()) {
+        def ks = new Properties()
+        keystoreFile.withInputStream { ks.load(it) }
+        signingConfigs {
+            release {
+                storeFile file(ks['storeFile'])
+                storePassword ks['storePassword']
+                keyAlias ks['keyAlias']
+                keyPassword ks['keyPassword']
+            }
+        }
+    }
+
     buildTypes {
         release {
             minifyEnabled false
+            if (keystoreFile.exists()) signingConfig signingConfigs.release
         }
     }
 

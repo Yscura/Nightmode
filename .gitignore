@@ -13,9 +13,13 @@ local.properties
 *.iml
 .DS_Store
 
-# Signing keys
+# Signing keys and their passwords
 *.jks
 *.keystore
+keystore.properties
+
+# Ready-to-share APKs
+dist/
 
 # Built apps
 *.apk
