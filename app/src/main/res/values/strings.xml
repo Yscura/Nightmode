@@ -1,0 +1,5 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <string name="ad_service_name">Night Mode – YouTube ads</string>
+    <string name="ad_service_description">Watches the YouTube app only. While an ad plays it taps \"Skip ad\" as soon as it can, and mutes and darkens the screen until the video returns. Nothing is collected or sent anywhere.</string>
+</resources>

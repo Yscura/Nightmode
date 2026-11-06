@@ -1,0 +1,22 @@
+# Gradle / build output
+.gradle/
+build/
+captures/
+.externalNativeBuild/
+.cxx/
+
+# Machine-specific (SDK path)
+local.properties
+
+# Android Studio
+.idea/
+*.iml
+.DS_Store
+
+# Signing keys
+*.jks
+*.keystore
+
+# Built apps
+*.apk
+*.aab
